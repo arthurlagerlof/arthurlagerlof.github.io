@@ -898,6 +898,23 @@ section p {
     color: #2980b9;
 }
 
+.contact-email {
+    color: white;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.contact-email a {
+    color: white;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.contact-email a:hover {
+    color: #3498db;
+}
+
 .contact-cta {
     display: flex;
     flex-direction: column;
