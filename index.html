@@ -23,59 +23,601 @@
 
     <main>
         <section id="hero">
+            <div class="hero-background">
+                <img src="images/2.jpg" alt="Background" class="hero-image active">
+                <img src="images/3.jpg" alt="Background" class="hero-image">
+                <img src="images/4.jpg" alt="Background" class="hero-image">
+                <img src="images/5.jpg" alt="Background" class="hero-image">
+            </div>
             <div class="hero-content">
-                <h1>Hi, I'm Arthur Lagerlöf</h1>
-                <p>Web Developer</p>
-                <a href="#projects" class="cta-button">View My Work</a>
-            </div>
-        </section>
-
-        <section id="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>xxx</p>
-            </div>
-        </section>
-
-        <section id="projects">
-            <div class="container">
-                <h2>Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <h3>Test 1</h3>
-                        <p>Description test.</p>
-                        <a href="#" class="project-link">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Test 2</h3>
-                        <p>Description test.</p>
-                        <a href="#" class="project-link">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Test 3</h3>
-                        <p>Description test.</p>
-                        <a href="#" class="project-link">View Project</a>
-                    </div>
+                <h1>Arthur Lagerlöf</h1>
+                <p>Web Application Developer</p>
+                <div class="hero-cta">
+                    <a href="#about" class="cta-button">About Me</a>
+                    <span class="cta-separator"></span>
+                    <a href="#projects" class="cta-button">My Projects</a>
+                    <span class="cta-separator"></span>
+                    <a href="#contact" class="cta-button">Get In Touch</a>
                 </div>
             </div>
         </section>
 
-        <section id="contact">
-            <div class="container">
-                <h2>Get In Touch</h2>
-                <div class="contact-links">
-                    <a href="mailto:arthur.lagerlof@abo.fi">Email</a>
-                    <a href="https://github.com/arthurlagerlof" target="_blank">GitHub</a>
-                    <a href="https://www.linkedin.com/in/arthur-lagerlöf-85031927b/" target="_blank">LinkedIn</a>
+        <div class="content-wrapper">
+            <section id="about">
+                <div class="container about-content">
+                    <div class="title-button-container">
+                        <h3 id="courses-title" style="display: none;">Programming and Web Development Courses</h3>
+                        <button id="minimize-btn" class="minimize-button" style="display: none;">Click to minimize</button>
+                    </div>
+                    <div id="about-content" class="about-text">
+                        <div class="about-header">
+                            <img src="images/me.jpeg" alt="Arthur Lagerlöf" class="profile-photo">
+                            <h2>About Me</h2>
+                        </div>
+                        <p>As the sole developer of ZoneTask and a bookkeeper for Makarlan Talli Oy, I combine analytical skills with technical software development. I'm fluent in Swedish, Finnish, and English, with conversational proficiency in German and Spanish, which helps me communicate effectively with diverse teams. I enjoy solving challenges through code and creating practical solutions.</p>
+                    </div>
+                    <div class="cards-container" id="cards-container" style="display: none;">
+                    <div class="cards-wrapper" id="cards-wrapper">
+                    </div>
                 </div>
-            </div>
-        </section>
+                    <div id="education-panel" class="education-panel">
+                        <h2>Education</h2>
+                        <p class="education-subtitle">Currently studying at Katedralskolan i Åbo</p>
+                        <a href="https://info.edu.turku.fi/katedral/" target="_blank" class="education-cta">
+                            <p>Katedralskolan i Åbo</p>
+                            <p class="education-subtitle">Upper Secondary School</p>
+                        </a>
+                        <div class="education-cta">
+                            <p>Programming and Web Development Courses</p>
+                            <p class="education-subtitle">Click to view courses</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects">
+                <div class="container">
+                    <h2 class="projects-title">Projects</h2>
+                    <div class="projects-grid">
+                        <div class="project-card" data-index="0">
+                            <h3 class="card-title">Funding Advisor</h3>
+                            <p>AI-powered funding advisor that uses OpenAI API to perform web searches for information on investors and companies. Aimed to help Business Turku clients find funding opportunities, though it wasn't selected for implementation.</p>
+                            <div class="tech-stack">
+                                <h4>Tech Stack</h4>
+                                <div class="tech-stack-content">
+                                    <div class="tech-category">
+                                        <h5>Frontend</h5>
+                                        <ul>
+                                            <li>React</li>
+                                            <li>Vite</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tech-category">
+                                        <h5>Backend</h5>
+                                        <ul>
+                                            <li>Node.js</li>
+                                            <li>Express</li>
+                                            <li>OpenAI</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tech-category">
+                                        <h5>Database</h5>
+                                        <ul>
+                                            <li>SQLite</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="development-panel">
+                                <p>Developed by a team of four over three days at the Since AI Hackathon. I configured OpenAI models, contributed to tech stack decisions (especially choosing SQLite for local data storage) and helped coordinate the team while collaborating with my teammates.</p>
+                            </div>
+                            <a href="https://github.com/Jathosn/AI-funding-advisor-demo" target="_blank" class="project-link">
+                                <button class="view-project-btn">GitHub</button>
+                            </a>
+                            <a href="https://youtu.be/miDlZqOv9Qc?si=RVRKIdpmvlFTYyr7" target="_blank" class="project-link">
+                                <button class="view-project-btn watch-demo-btn">Demo Video</button>
+                            </a>
+                        </div>
+                        <div class="project-card" data-index="1">
+                            <h3>ZoneTask</h3>
+                            <p>ZoneTask is a web app that connects local service providers with nearby customers through location-based matching. Currently in demo stage with 20+ users validating market demand.</p>
+                            <div class="tech-stack">
+                                <h4>Tech Stack</h4>
+                                <div class="tech-stack-content">
+                                    <div class="tech-category">
+                                        <h5>Frontend</h5>
+                                        <ul>
+                                            <li>React</li>
+                                            <li>Leaflet</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tech-category">
+                                        <h5>Backend</h5>
+                                        <ul>
+                                            <li>FastAPI</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tech-category">
+                                        <h5>Database</h5>
+                                        <ul>
+                                            <li>PostgreSQL</li>
+                                            <li>PostGIS</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tech-category">
+                                        <h5>Authentication</h5>
+                                        <ul>
+                                            <li>JWT</li>
+                                            <li>bcrypt</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tech-category" title="Docker will be used in production later instead of Render and Vercel">
+                                        <h5>Deployment</h5>
+                                        <ul>
+                                            <li>Render</li>
+                                            <li>Vercel</li>
+                                            <li class="docker-item">Docker</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="development-panel">
+                                <p>I've been developing ZoneTask solo since July 2025, building full-stack functionality from concept to demo. Currently ZoneTask is deployed on Vercel and Render, with Docker planned for future production deployment.</p>
+                            </div>
+                            <a href="https://zonetask.vercel.app" target="_blank" class="project-link">
+                                <button class="view-project-btn">View Demo</button>
+                            </a>
+                        </div>
+                        <div class="project-card" data-index="2">
+                            <h3>Coin Escape</h3>
+                            <p>Coin Escape is a 2D stealth game made in Pygame where the player navigates randomly generated maps while collecting coins and avoiding an increasingly aggressive enemy.</p>
+                            <div class="development-panel">
+                                <p>Developed by myself as a project for the Advanced Course in Programming, demonstrating game development fundamentals including enemy path-finding, sprite management, and level progression.</p>
+                            </div>
+                            <a href="https://github.com/arthurlagerlof/pygame-project" target="_blank" class="project-link">
+                                <button class="view-project-btn">GitHub</button>
+                            </a>
+                            <a href="#" class="project-link" onclick="scrollToAdvancedCourse(); return false;">
+                                <button class="view-project-btn view-course-btn">View Course</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <div class="container">
+                    <h2>Contact</h2>
+                    <div class="contact-cta">
+                        <div class="contact-links">
+                            <a href="mailto:arthur.lagerlof@abo.fi" class="cta-button">Email</a>
+                            <a href="https://github.com/arthurlagerlof" target="_blank" class="cta-button">GitHub</a>
+                            <a href="https://www.linkedin.com/in/arthur-lagerlöf-85031927b/" target="_blank" class="cta-button">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="container">
+                    <p>&copy; 2026 Arthur Lagerlöf. All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Arthur Lagerlöf. All rights reserved.</p>
-        </div>
-    </footer>
+    <script>
+        // Image rotation
+        const images = document.querySelectorAll('.hero-image');
+        let currentImage = 0;
+
+        function rotateImages() {
+            images[currentImage].classList.remove('active');
+            currentImage = (currentImage + 1) % images.length;
+            images[currentImage].classList.add('active');
+        }
+
+        setInterval(rotateImages, 5000);
+
+        let isExpanded = false;
+        const aboutContent = document.getElementById('about-content');
+        const educationPanel = document.getElementById('education-panel');
+        const minimizeBtn = document.getElementById('minimize-btn');
+        const coursesTitle = document.getElementById('courses-title');
+        const cardsContainer = document.getElementById('cards-container');
+        const cardsWrapper = document.getElementById('cards-wrapper');
+
+        // click handler for courses CTA
+        document.querySelectorAll('.education-cta')[1].addEventListener('click', () => {
+            if (!isExpanded) {
+                aboutContent.style.transform = 'translateX(-300%)';
+                educationPanel.style.transform = 'translateX(300%)';
+                aboutContent.style.opacity = '0';
+                educationPanel.style.opacity = '0';
+                coursesTitle.style.display = 'block';
+                minimizeBtn.style.display = 'block';
+                cardsContainer.style.display = 'flex';
+                aboutContent.parentElement.classList.add('expanded');
+                isExpanded = true;
+                generateEducationCards();
+            }
+        });
+        
+        // Click handler for minimize button
+        minimizeBtn.addEventListener('click', () => {
+            aboutContent.style.transform = 'translateX(0)';
+            educationPanel.style.transform = 'translateX(0)';
+            aboutContent.style.opacity = '1';
+            educationPanel.style.opacity = '1';
+            coursesTitle.style.display = 'none';
+            minimizeBtn.style.display = 'none';
+            cardsContainer.style.display = 'none';
+            aboutContent.parentElement.classList.remove('expanded');
+            isExpanded = false;
+        });
+
+        function generateEducationCards() {
+            cardsWrapper.innerHTML = '';
+            
+            const cardData = [
+                {
+                    title: "Full Stack Open (in progress)",
+                    content: "<strong>5-14 ECTS - University of Helsinki</strong> <br><br> React, Redux, Node.js, MongoDB, GraphQL and TypeScript",
+                    url: "https://fullstackopen.com/en/"
+                },
+                {
+                    title: "Elements of AI: Building AI (in progress)",
+                    content: "<strong>2 ECTS - University of Helsinki & MinnaLearn</strong> <br><br> Linear regression, simple probabilistic inference, nearest neighbors, simple neural networks",
+                    url: "https://buildingai.elementsofai.com/"
+                },
+                {
+                    title: "Advanced Course in Programming",
+                    content: "<strong>5 ECTS - University of Helsinki</strong> <br><br> Advanced Python programming course with project work",
+                    url: "https://programming-25.mooc.fi"
+                },
+                {
+                    title: "Introduktion till Artificiell Intelligens (AI)",
+                    content: "<strong>5 ECTS - Åbo Akademi</strong> <br><br> Introduction to AI: Search algorithms, machine learning, NLP",
+                    url: "https://studiehandboken.abo.fi/sv/kurs/IT00CD35/17023?period=2024-2027"
+                },
+                {
+                    title: "Introduction to Programming",
+                    content: "<strong>5 ECTS - University of Helsinki</strong> <br><br> Python programming course",
+                    url: "https://programming-25.mooc.fi"
+                },
+                {
+                    title: "Elements of AI: Introduction to AI",
+                    content: "<strong>2 ECTS - University of Helsinki & MinnaLearn</strong> <br><br> Introduction to AI concepts and applications",
+                    url: "https://www.elementsofai.com"
+                },
+                {
+                    title: "Introduktion till Informationsteknologi",
+                    content: "<strong>3 ECTS - Åbo Akademi & FITech</strong> <br><br> The fundamentals of computer science and information technology",
+                    url: "https://fitech.io/fi/opinnot/introduktion-till-informationsteknologi-mooc/"
+                }
+            ];
+            
+            cardData.forEach((data, index) => {
+                const card = document.createElement('div');
+                card.className = 'education-card';
+                card.dataset.index = index;
+                
+                const isAdvancedCourse = index === 2;
+                
+                if (isAdvancedCourse) {
+                    card.innerHTML = `
+                        <h3>${data.title}</h3>
+                        <p>${data.content}</p>
+                        <div class="button-container">
+                            <a href="${data.url}" class="course-link" target="_blank">
+                                <button class="visit-course-btn">Visit Course</button>
+                            </a>
+                            <a href="#" class="course-link" onclick="scrollToCoinEscape(); return false;">
+                                <button class="education-view-project-btn">View Project</button>
+                            </a>
+                        </div>
+                    `;
+                } else {
+                    card.innerHTML = `
+                        <h3>${data.title}</h3>
+                        <p>${data.content}</p>
+                        <a href="${data.url}" class="course-link" target="_blank">
+                            <button class="visit-course-btn">Visit Course</button>
+                        </a>
+                    `;
+                }
+                
+                card.addEventListener('click', () => selectCard(index));
+                cardsWrapper.appendChild(card);
+                
+                // Add separator after in progress courses (after index 1)
+                if (index === 1) {
+                    const separator = document.createElement('div');
+                    separator.className = 'education-separator';
+                    cardsWrapper.appendChild(separator);
+                }
+            });
+            
+            // Select first completed course
+            selectCard(2);
+        }
+
+        function selectCard(index) {
+            const cards = cardsWrapper.querySelectorAll('.education-card');
+            cards.forEach((card, i) => {
+                if (i === index) {
+                    card.classList.toggle('expanded');
+                } else {
+                    card.classList.remove('expanded');
+                }
+            });
+        }
+
+        // Project card selection functionality
+        let previousSelectedIndex = 0; 
+
+        function selectProjectCard(index) {
+            // Don't do anything if clicking the already selected card
+            if (previousSelectedIndex === index) {
+                return;
+            }
+            
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            projectCards.forEach(card => {
+                card.classList.remove('selected', 'top-unselected', 'bottom-unselected');
+            });
+            
+            projectCards[index].classList.add('selected');
+            
+            projectCards.forEach((card, i) => {
+                if (i !== index) {
+                    if (i === previousSelectedIndex) {
+                        card.classList.add('top-unselected');
+                    } else {
+                        card.classList.add('bottom-unselected');
+                    }
+                }
+            });
+            
+            previousSelectedIndex = index;
+        }
+
+        // click handlers for project cards
+        document.addEventListener('DOMContentLoaded', () => {
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach((card, index) => {
+                card.addEventListener('click', () => selectProjectCard(index));
+            });
+            
+            // Select zonetask by default (index 1)
+            selectProjectCard(1);
+            
+            const navButtons = document.querySelectorAll('.hero-cta a, .nav-links a');
+            
+            navButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const href = e.target.getAttribute('href');
+                    
+                    if (href === '#about') {
+                        window.scrollTo({
+                            top: 440,
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        const targetId = href.substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        
+                        if (targetElement) {
+                            const header = document.querySelector('header');
+                            const headerHeight = header.offsetHeight;
+                            const buffer = 20;
+                            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - buffer;
+                            
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+
+        // Header transparency fade on scroll
+        let logoAnimated = false;
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const header = document.querySelector('header');
+            const contentWrapper = document.querySelector('.content-wrapper');
+            const logo = document.querySelector('.logo');
+            const maxScroll = 160;
+            const contentAnimMaxScroll = 100; // Scroll distance for content animation
+            
+            // Initialize logo position on first run
+            if (logo && !logo.style.left) {
+                const logoWidth = logo.offsetWidth;
+                const centerLeft = window.innerWidth / 2 - logoWidth / 2;
+                logo.style.left = `${centerLeft}px`;
+            }
+            
+            console.log('Scroll position:', scrolled);
+            
+            //***här
+            // Content scroll animation (100vh to 100vh-300px (or 500px), starts at 0px scroll)
+            const initialTop = window.innerHeight;
+            if (scrolled <= contentAnimMaxScroll) {
+                const contentOffset = initialTop - (scrolled / contentAnimMaxScroll) * 300;
+                contentWrapper.style.top = `${Math.max(500, contentOffset)}px`;
+            } else {
+                contentWrapper.style.top = `${Math.max(500, initialTop - 300)}px`;
+            }
+            
+            // Calculate nav links opacity (320-370px)
+            let navOpacity = 0;
+            if (scrolled >= 320 && scrolled <= 370) {
+                navOpacity = (scrolled - 320) / 50;
+            } else if (scrolled > 370) {
+                navOpacity = 1;
+            }
+            
+            if (scrolled <= maxScroll) {
+                // Fade header opacity as scrolling down
+                const opacity = scrolled / maxScroll;
+                header.style.background = `rgba(44, 62, 80, ${opacity})`;
+                header.style.boxShadow = `0 2px 10px rgba(0, 0, 0, ${0.1 * opacity})`;
+            } else {
+                header.style.background = 'rgba(44, 62, 80, 1)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            }
+            
+            const navLinks = header.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.style.color = `rgba(255, 255, 255, ${navOpacity})`;
+            });
+            
+            if (logo) {
+                // Logo animation
+                if (scrolled >= 220 && !logoAnimated) {
+                    logoAnimated = true;
+                    const navContainerWidth = 1200;
+                    const navContainerLeft = Math.max(0, (window.innerWidth - navContainerWidth) / 2);
+                    const finalLeft = navContainerLeft + 20;
+                    
+                    // Start automatic 1.5s 
+                    logo.style.transition = 'left 1.5s ease, color 1.5s ease';
+                    logo.style.left = `${finalLeft}px`;
+                    logo.style.color = 'rgba(255, 255, 255, 1)';
+                } else if (scrolled < 220 && logoAnimated) {
+                    logoAnimated = false;
+                    const logoWidth = logo.offsetWidth;
+                    const centerLeft = window.innerWidth / 2 - logoWidth / 2;
+                    
+                    // Fade out and return to center in 0.3s
+                    logo.style.transition = 'left 0.3s ease, color 0.3s ease';
+                    logo.style.left = `${centerLeft}px`;
+                    logo.style.color = 'rgba(255, 255, 255, 0)';
+                }
+            }
+            
+            // Parallax effect for image, starts at 90px)
+            const heroBackground = document.querySelector('.hero-background');
+            const imageParallaxSpeed = 0.5;
+            
+            if (scrolled >= 90) {
+                const parallaxScroll = scrolled - 90; 
+                const imageOffset = -parallaxScroll * imageParallaxSpeed;
+                heroBackground.style.transform = `translateY(${imageOffset}px)`;
+            } else {
+                // No parallax before 90px scroll
+                heroBackground.style.transform = 'translateY(0)';
+            }
+            
+            // Scale hero title 
+            const heroTitle = document.querySelector('.hero-content h1');
+            if (heroTitle) {
+                let fontSize;
+                const screenWidth = window.innerWidth;
+                let startSize;
+                if (screenWidth >= 1200) {
+                    startSize = 3;
+                } else if (screenWidth >= 768) {
+                    startSize = 2.5;
+                } else if (screenWidth >= 420) {
+                    startSize = 2;
+                } else {
+                    startSize = 1.5;
+                }
+                const logoSize = 1.5; // Header logo size
+                const endSize = Math.max(startSize * 0.5, logoSize); // 50% of start size or at least logo size
+                if (scrolled <= 220) {
+                    fontSize = startSize - (scrolled / 220) * (startSize - endSize);
+                } else {
+                    fontSize = endSize;
+                }
+                heroTitle.style.fontSize = `${fontSize}rem`;
+            }
+            
+            // Scale hero subtitle 
+            const heroSubtitle = document.querySelector('.hero-content p');
+            if (heroSubtitle) {
+                let subtitleFontSize;
+                const screenWidth = window.innerWidth;
+                let subtitleStartSize;
+                if (screenWidth >= 1200) {
+                    subtitleStartSize = 1.5;
+                } else if (screenWidth >= 768) {
+                    subtitleStartSize = 1.25;
+                } else if (screenWidth >= 420) {
+                    subtitleStartSize = 1;
+                } else {
+                    subtitleStartSize = 0.875;
+                }
+                const subtitleEndSize = subtitleStartSize * 0.5;
+                if (scrolled <= 340) {
+                    subtitleFontSize = subtitleStartSize - (scrolled / 340) * (subtitleStartSize - subtitleEndSize);
+                } else {
+                    subtitleFontSize = subtitleEndSize;
+                }
+                heroSubtitle.style.fontSize = `${subtitleFontSize}rem`;
+            }
+            
+            const heroCta = document.querySelector('.hero-cta');
+            if (heroCta) {
+                let gap;
+                if (scrolled <= 300) {
+                    gap = 1 - (scrolled / 300) * 1;
+                } else {
+                    gap = 0;
+                }
+                heroCta.style.gap = `${gap}rem`;
+            }
+        });
+
+        // Function to scroll to projects section and select Coin Escape project
+        function scrollToCoinEscape() {
+            // Scroll to projects section
+            const projectsSection = document.querySelector('#projects');
+            if (projectsSection) {
+                projectsSection.scrollIntoView({ behavior: 'smooth' });
+                
+                // Wait for scroll to complete, then select Coin Escape project
+                setTimeout(() => {
+                    selectProjectCard(2); 
+                }, 500);
+            }
+        }
+
+        // Function to scroll to about section, expand education, and select Advanced Course
+        function scrollToAdvancedCourse() {
+            // Scroll to about section
+            const aboutSection = document.querySelector('#about');
+            if (aboutSection) {
+                aboutSection.scrollIntoView({ behavior: 'smooth' });
+                
+                // Wait for scroll to complete, then expand education and select course
+                setTimeout(() => {
+                    // Click the education CTA to expand courses
+                    const educationCTA = document.querySelectorAll('.education-cta')[1];
+                    if (educationCTA && !isExpanded) {
+                        educationCTA.click();
+                        
+                        // Wait for expansion, then select Advanced Course card (index 2) if not already selected
+                        setTimeout(() => {
+                            if (previousSelectedCardIndex !== 2) {
+                                selectCard(2);
+                            }
+                        }, 300);
+                    } else if (isExpanded) {
+                        // Already expanded, select course only if not already selected
+                        if (previousSelectedCardIndex !== 2) {
+                            selectCard(2);
+                        }
+                    }
+                }, 500);
+            }
+        }
+    </script>
 </body>
 </html>
