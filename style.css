@@ -216,8 +216,8 @@ section {
     padding: 40px 0;
 }
 
-section:nth-child(even) {
-    background: #f8f9fa;
+#contact {
+    background: #2c3e50;
 }
 
 #about {
@@ -491,7 +491,15 @@ section h2 {
 }
 
 .about-content.expanded {
-    min-height: 800px;
+    min-height: 810px;
+}
+
+.certificates-note {
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    opacity: 0.8;
 }
 
 .education-card h3 {
@@ -919,22 +927,29 @@ section p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
+}
+
+.contact-links {
+    display: flex;
+    gap: 2rem;
 }
 
 .contact-links a {
     display: inline-block;
-    background: #3498db;
+    background: rgba(255, 255, 255, 0.2);
     color: white;
     padding: 12px 24px;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: 500;
-    transition: background 0.3s ease;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .contact-links a:hover {
-    background: #2980b9;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */

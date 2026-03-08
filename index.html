@@ -73,6 +73,7 @@
                         </div>
                     </div>
                 </div>
+                <p class="certificates-note" id="certificates-note" style="display: none;">Course certificates available on request</p>
             </section>
 
             <section id="projects">
@@ -237,6 +238,7 @@
                 coursesTitle.style.display = 'block';
                 minimizeBtn.style.display = 'block';
                 cardsContainer.style.display = 'flex';
+                document.getElementById('certificates-note').style.display = 'block';
                 aboutContent.parentElement.classList.add('expanded');
                 isExpanded = true;
                 generateEducationCards();
@@ -252,6 +254,7 @@
             coursesTitle.style.display = 'none';
             minimizeBtn.style.display = 'none';
             cardsContainer.style.display = 'none';
+            document.getElementById('certificates-note').style.display = 'none';
             aboutContent.parentElement.classList.remove('expanded');
             isExpanded = false;
         });
