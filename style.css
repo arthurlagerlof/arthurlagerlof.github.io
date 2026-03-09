@@ -233,7 +233,7 @@ section {
 }
 
 #projects {
-    background: white;
+    background: #f5f5dc;
 }
 
 body {
@@ -253,10 +253,6 @@ section h2 {
 
 #contact h2 {
     color: white;
-}
-
-#projects {
-    background: #f5f5dc;
 }
 
 .about-content {
