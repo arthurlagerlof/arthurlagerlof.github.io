@@ -658,6 +658,7 @@ section p {
 .projects-grid {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    grid-auto-rows: min-content;
     gap: 2rem;
     margin-top: 3rem;
     align-items: start;
@@ -743,11 +744,42 @@ section p {
     display: none;
 }
 
+/* Project Image Gallery */
+.project-image-gallery {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    max-width: 280px;
+}
+
+.project-image-panel {
+    flex: 1;
+    max-width: 136px;
+    background: white;
+    border-radius: 8px;
+    padding: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 3 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.project-image-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Hide image gallery on unselected cards */
+.project-card[data-index="3"]:not(.selected) .project-image-gallery {
+    display: none;
+}
+
 .project-card:not(.selected) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: calc(25% - 1.5rem);
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -755,6 +787,9 @@ section p {
     text-align: center;
     padding: 1.5rem;
     cursor: pointer;
+    position: relative;
+    top: auto;
+    right: auto;
 }
 
 .watch-demo-btn {
@@ -785,13 +820,42 @@ section p {
     display: block !important;
 }
 
-.top-unselected {
-    top: 0 !important;
+/* Selected card in column 1, spanning full height */
+.project-card.selected {
+    grid-column: 1;
+    grid-row: 1 / span 4;
 }
 
-.bottom-unselected {
-    top: calc(80px + 0.5rem) !important;
+/* Unselected cards positioned absolutely in column 2 with fixed top offsets */
+.project-card:not(.selected) {
+    grid-column: 2;
+    grid-row: 1;
+    position: relative;
+    align-self: start;
 }
+
+/* Stacked positioning for unselected cards */
+.project-card[data-index="0"]:not(.selected) { top: 0; }
+.project-card[data-index="1"]:not(.selected) { top: 0; }
+.project-card[data-index="2"]:not(.selected) { top: 0; }
+.project-card[data-index="3"]:not(.selected) { top: 0; }
+
+/* When cards are unselected, offset them based on their data-index */
+.projects-grid:has(.project-card[data-index="0"].selected) .project-card[data-index="1"]:not(.selected) { margin-top: 0; }
+.projects-grid:has(.project-card[data-index="0"].selected) .project-card[data-index="2"]:not(.selected) { margin-top: 110px; }
+.projects-grid:has(.project-card[data-index="0"].selected) .project-card[data-index="3"]:not(.selected) { margin-top: 220px; }
+
+.projects-grid:has(.project-card[data-index="1"].selected) .project-card[data-index="0"]:not(.selected) { margin-top: 0; }
+.projects-grid:has(.project-card[data-index="1"].selected) .project-card[data-index="2"]:not(.selected) { margin-top: 110px; }
+.projects-grid:has(.project-card[data-index="1"].selected) .project-card[data-index="3"]:not(.selected) { margin-top: 220px; }
+
+.projects-grid:has(.project-card[data-index="2"].selected) .project-card[data-index="0"]:not(.selected) { margin-top: 0; }
+.projects-grid:has(.project-card[data-index="2"].selected) .project-card[data-index="1"]:not(.selected) { margin-top: 110px; }
+.projects-grid:has(.project-card[data-index="2"].selected) .project-card[data-index="3"]:not(.selected) { margin-top: 220px; }
+
+.projects-grid:has(.project-card[data-index="3"].selected) .project-card[data-index="0"]:not(.selected) { margin-top: 0; }
+.projects-grid:has(.project-card[data-index="3"].selected) .project-card[data-index="1"]:not(.selected) { margin-top: 110px; }
+.projects-grid:has(.project-card[data-index="3"].selected) .project-card[data-index="2"]:not(.selected) { margin-top: 220px; }
 
 .project-card:not(.selected) h3 {
     margin: 0;
@@ -812,6 +876,15 @@ section p {
 
 .project-card.selected[data-index="2"] {
     background-image: url('images/coinescape.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-blend-mode: overlay;
+}
+
+.project-card.selected[data-index="3"] {
+    background-image: url('images/bokacha.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1002,15 +1075,39 @@ footer {
         flex-direction: row;
         justify-content: center;
         gap: 2rem;
+        grid-row: auto;
     }
     
     .top-unselected,
     .bottom-unselected {
         top: auto !important;
     }
+    
+    .project-card.selected {
+        grid-column: 1;
+        grid-row: auto;
+    }
+    
+    .project-card[data-index="0"],
+    .project-card[data-index="1"],
+    .project-card[data-index="2"],
+    .project-card[data-index="3"] {
+        grid-row: auto;
+        margin-top: 0 !important;
+    }
+    
 }
 
 @media (max-width: 420px) {
+    .project-image-gallery {
+        flex-direction: column;
+        max-width: none;
+    }
+    
+    .project-image-panel {
+        max-width: 200px;
+        margin: 0 auto;
+    }
     .project-card[data-index="0"].selected .card-title::after {
         width: 60px;
         height: 20px;
